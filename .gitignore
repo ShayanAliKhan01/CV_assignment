@@ -70,3 +70,6 @@ output/*.jpg
 *.tmp
 *.temp
 *.log
+
+# Allow tracking the specific input video
+!input/video.mp4

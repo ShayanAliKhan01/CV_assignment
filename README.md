@@ -22,7 +22,7 @@ CV_assignment/
 │   └── evaluator.py                   # Performance metrics & visual reports
 │
 ├── input/                             # 📹 Input Data
-│   └── Virat Kohli's cover drive footage from stands 🐐🔥.mp4  # Sample video
+│   └── video.mp4                      # Input video (Virat Kohli's cover drive: https://www.youtube.com/shorts/Q-W__e0YQuM)
 │
 ├── output/                            # 📊 Generated Outputs (CSV and plots)
 │   ├── results.csv                    # Frame-by-frame predictions
@@ -116,7 +116,7 @@ from src import PoseEstimator, AngleCalculator, DataProcessor, ActivityClassifie
 
 # 1. Pose estimation
 estimator = PoseEstimator(confidence_threshold=0.5)
-landmarks, fps, _ = estimator.extract_landmarks_from_video("input/Virat Kohli's cover drive footage from stands 🐐🔥.mp4")
+landmarks, fps, _ = estimator.extract_landmarks_from_video("input/video.mp4")
 
 # 2. Smooth and calculate angles
 smoothed = estimator.smooth_landmarks(landmarks, window=5, polyorder=2)
